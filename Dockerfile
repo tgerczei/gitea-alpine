@@ -16,7 +16,7 @@ ADD https://www.gerczei.eu/files/tamas@gerczei.eu-5ec0fe1e.rsa.pub /etc/apk/keys
 # using a community package re-built locally via apkbuild with MySQL support
 RUN     apk add --repository https://www.gerczei.eu/packages/alpine/v3.14 --no-cache \
                 git-lfs=2.13.1-r1 \
-                openssh-keygen=8.6_p1-r1 \
+                openssh-keygen=8.6_p1-r2 \
                 bash=5.1.4-r0 \
                 gitea=1.14.4-r0 && \
         mkdir /var/cache/gitea && \
