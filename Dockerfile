@@ -18,7 +18,7 @@ RUN     apk add --repository https://www.gerczei.eu/packages/alpine/v3.15 --no-c
                 git-lfs=3.0.2-r0 \
                 openssh-keygen=8.8_p1-r1 \
                 bash=5.1.8-r0 \
-                gitea=1.15.7-r0 && \
+                gitea=1.15.8-r0 && \
         mkdir /var/cache/gitea && \
         chown gitea:www-data /var/cache/gitea
 
