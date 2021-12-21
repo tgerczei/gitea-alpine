@@ -4,7 +4,7 @@ ARG BUILD_DATE
 
 LABEL org.opencontainers.image.title="Gitea - Git with a cup of tea"
 LABEL org.opencontainers.image.description="A painless self-hosted Git service."
-LABEL org.opencontainers.image.version="1.15.7"
+LABEL org.opencontainers.image.version="1.15.8"
 LABEL org.opencontainers.image.url="https://gitea.io"
 LABEL org.opencontainers.image.authors="Tamás Gérczei <tamas@gerczei.eu>"
 LABEL org.opencontainers.image.created="${BUILD_DATE}"
