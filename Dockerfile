@@ -1,10 +1,10 @@
-FROM alpine:3.15.1
+FROM alpine:3.15.2
 
 ARG BUILD_DATE
 
 LABEL org.opencontainers.image.title="Gitea - Git with a cup of tea"
 LABEL org.opencontainers.image.description="A painless self-hosted Git service."
-LABEL org.opencontainers.image.version="1.16.4"
+LABEL org.opencontainers.image.version="1.16.5"
 LABEL org.opencontainers.image.url="https://gitea.io"
 LABEL org.opencontainers.image.authors="Tamás Gérczei <tamas@gerczei.eu>"
 LABEL org.opencontainers.image.created="${BUILD_DATE}"
@@ -18,8 +18,7 @@ RUN     apk add --repository https://www.gerczei.eu/packages/alpine/v3.15 --no-c
                 git-lfs=3.0.2-r0 \
                 openssh-keygen=8.8_p1-r1 \
                 bash=5.1.16-r0 \
-                libretls=3.3.4-r3 \
-                gitea=1.16.4-r0 && \
+                gitea=1.16.5-r0 && \
         mkdir /var/cache/gitea && \
         chown gitea:www-data /var/cache/gitea
 
