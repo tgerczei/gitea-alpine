@@ -4,7 +4,7 @@ ARG BUILD_DATE
 
 LABEL org.opencontainers.image.title="Gitea - Git with a cup of tea"
 LABEL org.opencontainers.image.description="A painless self-hosted Git service."
-LABEL org.opencontainers.image.version="1.16.5"
+LABEL org.opencontainers.image.version="1.16.6"
 LABEL org.opencontainers.image.url="https://gitea.io"
 LABEL org.opencontainers.image.authors="Tamás Gérczei <tamas@gerczei.eu>"
 LABEL org.opencontainers.image.created="${BUILD_DATE}"
@@ -15,10 +15,10 @@ ADD https://www.gerczei.eu/files/tamas@gerczei.eu-5ec0fe1e.rsa.pub /etc/apk/keys
 
 # using a community package re-built locally via apkbuild with MySQL support
 RUN     apk add --repository https://www.gerczei.eu/packages/alpine/v3.15 --no-cache \
-                git-lfs=3.0.2-r0 \
+                git-lfs=3.0.2-r1 \
                 openssh-keygen=8.8_p1-r1 \
                 bash=5.1.16-r0 \
-                gitea=1.16.5-r0 && \
+                gitea=1.16.6-r0 && \
         mkdir /var/cache/gitea && \
         chown gitea:www-data /var/cache/gitea
 
