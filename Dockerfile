@@ -1,4 +1,4 @@
-FROM alpine:3.15.4
+FROM alpine:3.16.0
 
 ARG BUILD_DATE
 
@@ -14,10 +14,10 @@ LABEL org.opencontainers.image.vendor="Gérczei Tamás E.V."
 ADD https://www.gerczei.eu/files/tamas@gerczei.eu-5ec0fe1e.rsa.pub /etc/apk/keys/
 
 # using a community package re-built locally via apkbuild with MySQL support
-RUN     apk add --repository https://www.gerczei.eu/packages/alpine/v3.15 --no-cache \
-                git-lfs=3.0.2-r2 \
-                openssh-keygen=8.8_p1-r1 \
-                bash=5.1.16-r0 \
+RUN     apk add --repository https://www.gerczei.eu/packages/alpine/v3.16 --no-cache \
+                git-lfs=3.1.4-r1 \
+                openssh-keygen=9.0_p1-r1 \
+                bash=5.1.16-r2 \
                 gitea=1.16.8-r0 && \
         mkdir /var/cache/gitea && \
         chown gitea:www-data /var/cache/gitea
