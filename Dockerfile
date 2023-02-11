@@ -1,4 +1,4 @@
-FROM alpine:3.17.1
+FROM alpine:3.17.2
 
 ARG BUILD_DATE
 
@@ -16,7 +16,7 @@ ADD https://www.gerczei.eu/files/tamas@gerczei.eu-5ec0fe1e.rsa.pub /etc/apk/keys
 # using a community package re-built locally via apkbuild with MySQL support
 RUN     apk add --repository https://www.gerczei.eu/packages/alpine/v3.17 --no-cache \
                 git-lfs=3.2.0-r3 \
-                openssh-keygen=9.1_p1-r1 \
+                openssh-keygen=9.1_p1-r2 \
                 bash=5.2.15-r0 \
                 gitea=1.18.3-r0 && \
         mkdir /var/cache/gitea && \
