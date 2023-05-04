@@ -15,10 +15,10 @@ ADD https://www.gerczei.eu/files/tamas@gerczei.eu-5ec0fe1e.rsa.pub /etc/apk/keys
 
 # using a community package re-built locally via apkbuild with MySQL support
 RUN     apk add --repository https://www.gerczei.eu/packages/alpine/v3.17 --no-cache \
-                git-lfs=3.2.0-r5 \
+                git-lfs=3.2.0-r6 \
                 openssh-keygen=9.1_p1-r2 \
                 bash=5.2.15-r0 \
-                gitea=1.19.2-r0 && \
+                gitea=1.19.3-r0 && \
         mkdir /var/cache/gitea && \
         chown gitea:www-data /var/cache/gitea
 
